@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+main {
+  @apply flex flex-col;
+  @apply h-dvh max-w-xl m-auto;
+}
+
+h1 {
+  @apply text-xl font-bold;
+  @apply p-4;
+}
+
+ul {
+  @apply flex-grow overflow-auto;
+  @apply p-4 py-0;
+}
+
+ul li {
+  @apply bg-gray-100 p-2 my-2;
+}
+
+input[type="text"] {
+  @apply border border-gray-400 rounded-xl p-2 px-4;
+  @apply w-full;
+  @apply text-base;
+}
+
+button {
+  @apply bg-blue-500 text-white font-bold py-2 px-4 rounded-xl;
+}
+
+form {
+  @apply flex gap-3;
+  @apply p-4;
+}

@@ -11,7 +11,12 @@ export default async function Home({ searchParams }) {
 
   return (
     <main>
-      <h1>Emoji TODO</h1>
+      <h1>
+        Emoji TODO{" "}
+        <a href="https://github.com/rauchg/emoji-todo" target="_blank">
+          source
+        </a>
+      </h1>
       <ul>
         {todos.map((todo) => (
           <li key={todo.id}>{todo.text}</li>

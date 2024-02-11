@@ -6,6 +6,18 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Next.js TODO",
+  metadataBase: new URL("https://emoji-todo.vercel.app"),
+  openGraph: {
+    title: "Emoji TODO",
+    url: "https://emoji-todo.vercel.app",
+    siteName: "Emoji TODO",
+  },
+  twitter: {
+    title: "Emoji TODO",
+    card: "summary_large_image",
+    site: "@rauchg",
+    creator: "@rauchg",
+  },
 };
 
 export default function RootLayout({

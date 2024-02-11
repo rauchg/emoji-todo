@@ -7,7 +7,9 @@ export default async function Home({ searchParams }) {
     .select()
     .from(todosTable)
     .limit(20)
-    .orderBy(searchParams.asc || sql`${todosTable.id} DESC`);
+    .orderBy(
+      searchParams.asc ? sql`${todosTable.id} ASC` : sql`${todosTable.id} DESC`
+    );
 
   return (
     <main>

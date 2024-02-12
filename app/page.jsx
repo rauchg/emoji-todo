@@ -12,7 +12,7 @@ export default async function Home({ searchParams }) {
     );
 
   return (
-    <main>
+    <main key={todos[0]?.id}>
       <h1>
         Emoji TODO{" "}
         <a href="https://github.com/rauchg/emoji-todo" target="_blank">
@@ -25,7 +25,7 @@ export default async function Home({ searchParams }) {
         ))}
       </ul>
 
-      <form action={submit} key={todos[0]?.id}>
+      <form action={submit}>
         <input
           type="text"
           placeholder="🫡 (only emojis allowed)"

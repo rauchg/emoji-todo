@@ -21,7 +21,7 @@ h1 {
 }
 
 h1 a {
-  @apply text-xs text-blue-500;
+  @apply text-xs text-blue-600;
   @apply font-normal;
 }
 

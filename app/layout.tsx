@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     site: "@rauchg",
     creator: "@rauchg",
   },
+  description: "A simple app to demonstate the ease of fetching and mutating data with Next.js App Router, RSC, and Server Actions."
 };
 
 export default function RootLayout({

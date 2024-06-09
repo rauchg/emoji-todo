@@ -10,6 +10,6 @@ A simple app to demonstate the ease of fetching and mutating data with Next.js A
 ## Developing
 
 - Run `vc link` - make sure your Vercel project has a Postgres db attached
-- Run `vc env pull` to populate `.env.local`
-- Run `drizzle-kit push:pg` to create the db schema
-- Run `next dev`
+- Run `vc env pull` to populate `.env`
+- Run `drizzle-kit push` to create the db schema
+- Run `pnpm dev`

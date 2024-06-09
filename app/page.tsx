@@ -2,7 +2,11 @@ import { db, todosTable } from "./db";
 import { submit } from "./actions";
 import { sql } from "drizzle-orm";
 
-export default async function Home({ searchParams }) {
+export default async function Home({
+  searchParams,
+}: {
+  searchParams: { asc: string };
+}) {
   const todos = await db
     .select()
     .from(todosTable)
@@ -32,7 +36,7 @@ export default async function Home({ searchParams }) {
           pattern="^[\p{Emoji}]+$"
           name="text"
           autoFocus
-          maxLength="10"
+          maxLength={10}
           required
         />
         <button>✉️</button>

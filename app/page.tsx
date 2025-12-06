@@ -5,14 +5,15 @@ import { sql } from "drizzle-orm";
 export default async function Home({
   searchParams,
 }: {
-  searchParams: { asc: string };
+  searchParams: Promise<{ asc?: string }>;
 }) {
+  const params = await searchParams;
   const todos = await db
     .select()
     .from(todosTable)
     .limit(20)
     .orderBy(
-      searchParams.asc ? sql`${todosTable.id} ASC` : sql`${todosTable.id} DESC`
+      params.asc ? sql`${todosTable.id} ASC` : sql`${todosTable.id} DESC`
     );
 
   return (
